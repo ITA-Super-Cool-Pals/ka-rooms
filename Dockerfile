@@ -1,5 +1,5 @@
 # Base image
-FROM python:alpine
+FROM python:alpine3.20
 
 # Copy alle filer i den mappe hvor min Dockerfile er til /app mappen i mit image
 COPY . /app
@@ -11,4 +11,4 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 
 # Eksekver denne kommando når Containeren køres
-CMD ["python", "main.py"]
+CMD ["python", "app.py"]

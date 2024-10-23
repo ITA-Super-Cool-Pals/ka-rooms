@@ -1,2 +1,2 @@
-# ka-reviews
-API for Kong Athurs Hotels værelsesreviews
+# ka-rooms
+Microservice for Rooms
