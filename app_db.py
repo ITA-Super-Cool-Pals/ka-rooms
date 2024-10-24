@@ -1,6 +1,6 @@
 import sqlite3
 
-db_path = 'rooms.db'
+db_path = '/app-db/rooms.db'
 
 # Create database with roomId, type columns
 def db_create():
