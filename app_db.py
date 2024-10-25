@@ -1,6 +1,7 @@
-import sqlite3
+import sqlite3, os
 
-db_path = '/app-db/rooms.db'
+db_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'app-db', 'rooms.db')
+os.makedirs(os.path.dirname(db_path), exist_ok=True)
 
 # Create database with roomId, type columns
 def db_create():
@@ -10,6 +11,7 @@ def db_create():
                     roomId INTEGER PRIMARY KEY,
                     type TEXT
                     )""")
+    print(f'Database created at {db_path}')
 
 # Get list of all rooms
 def get_all():

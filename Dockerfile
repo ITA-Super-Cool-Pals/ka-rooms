@@ -5,10 +5,10 @@ FROM python:alpine3.20
 COPY . /app
 
 # Skift til mappen /app (svarer til CD kommandoen)
-#WORKDIR /app
+WORKDIR /app
 
 # Installer alle dependencies
 RUN pip install -r requirements.txt
 
 # Eksekver denne kommando når Containeren køres
-CMD ["python", "/app/app.py"]
+CMD ["python", "app.py"]

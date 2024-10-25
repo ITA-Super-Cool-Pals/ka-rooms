@@ -12,7 +12,7 @@ def show_result(data, status=200):
     return Response(json.dumps(data, sort_keys=False), status=status, mimetype='application/json')
 
 # Check if DB exists, if not create empty new DB
-if not os.path.exists('rooms.db'):
+if not os.path.exists(app_db.db_path):
     print('rooms db not found, creating new')
     app_db.db_create()
 else:
