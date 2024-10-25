@@ -11,7 +11,7 @@ docker build -t ka-rooms https://github.com/ITA-Super-Cool-Pals/ka-rooms.git#mai
 
 2. Run the docker image:
 ```
-docker run -d -p 5001:5000 -v /path/to/db/dir:/app/app-db --name ka-rooms ka-rooms
+docker run --rm -d -p 5001:5000 -v /path/to/db/dir:/app/app-db --name ka-rooms ka-rooms
 ```
 Ensure you replace `/path/to/db/dir` with the path to where you save the database on your local machine
 
