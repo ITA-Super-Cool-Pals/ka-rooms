@@ -16,7 +16,7 @@ if not os.path.exists(app_db.db_path):
     print('rooms db not found, creating new')
     app_db.db_create()
 else:
-    print('rooms db found, using it')
+    print(f'rooms db found, using it at {app_db.db_path}')
 
 # Routes
 # Return all rooms
